@@ -1,7 +1,4 @@
 name: Custom Theme1
 type: theme
-description: 'My custom theme'
 core_version_requirement: ^11
 base theme: stark
-libraries:
-  - mytheme/global-styling
