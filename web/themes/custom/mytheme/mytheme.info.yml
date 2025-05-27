@@ -1,0 +1,5 @@
+name: Custom Theme1
+type: theme
+description: 'Reset test theme'
+core_version_requirement: ^11
+base theme: stark
