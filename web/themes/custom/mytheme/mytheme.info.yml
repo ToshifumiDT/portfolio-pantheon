@@ -1,6 +1,6 @@
 name: Custom Theme1
 type: theme
-description: 'A custom theme for testing'
+description: 'Reset test theme'
 package: Custom
 core_version_requirement: ^11
 base theme: stark
