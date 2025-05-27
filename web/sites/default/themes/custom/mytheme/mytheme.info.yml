@@ -1,0 +1,12 @@
+name: Custom Theme1
+type: theme
+description: 'A custom child theme based on Stark'
+core_version_requirement: ^11
+base theme: stark
+libraries:
+  - mytheme/global-styling
+regions:
+  header: 'Header'
+  content: 'Content'
+  sidebar: 'Sidebar'
+  footer: 'Footer'
