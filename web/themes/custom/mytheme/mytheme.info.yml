@@ -6,7 +6,7 @@ base theme: stark
 libraries:
   - mytheme/global-styling
 regions:
-  header: 'Header'
-  content: 'Content'
-  sidebar: 'Sidebar'
-  footer: 'Footer'
+  header: Header
+  content: Content
+  sidebar: Sidebar
+  footer: Footer
