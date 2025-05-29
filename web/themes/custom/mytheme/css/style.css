@@ -1,7 +1,144 @@
 body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
   background-color: #f9f9f9;
+  color: #333;
 }
 
 h1 {
   color: darkslateblue;
 }
+
+h2 {
+  font-size: 2rem;
+  margin-top: 30px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  text-align: center;
+}
+
+p {
+  margin: 15px 0;
+  font-size: 1rem;
+  text-align: center;  
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+}
+
+a {
+  color: darkslateblue;
+  text-decoration: none;
+}
+
+/*Header*/
+#header {
+  text-align: center;
+}
+
+/*About Me*/
+#main-content {
+  text-align: center;
+
+}
+
+/*Skillicon*/
+#skills {
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1.5rem;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.skills-grid div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills-grid img {
+  width: 96px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.skills-grid p {
+  margin: 0;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+/*My Projects*/
+#projects {
+  padding: 20px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.project-item {
+  text-align: left;
+}
+
+.project-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+.project-item h3 {
+  margin: 10px 0 5px;
+  font-size: 1.2em;
+}
+
+.project-item a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.project-item a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+/*Github Link*/
+#github {
+  text-align: center;
+}
+
+/*Contact Form*/
+#contact {
+  text-align: center;
+}
+
+/*Footer*/
+#footer {
+  text-align: center;
+}
+
+
+
+
