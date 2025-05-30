@@ -1,5 +1,10 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: sans-serif;
+  min-height: 100vh;
   margin: 0;
   padding: 0;
   line-height: 1.6;
@@ -23,29 +28,84 @@ h3 {
   text-align: center;
 }
 
-p {
-  margin: 15px 0;
+/*p {
+  max-width: 600px;
+  margin: 15px auto;
   font-size: 1rem;
-  text-align: center;  
-  align-items: center;
-  justify-content: center;
-  width: 600px;
-}
+}*/
 
 a {
   color: darkslateblue;
   text-decoration: none;
 }
 
+
+
+section {
+  scroll-margin-top: 80px;
+}
+
+
 /*Header*/
 #header {
-  text-align: center;
+  background-color: #fff;
+  padding: 20px 10%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; 
+}
+
+.header-container h1 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li a {
+  display: block;
+  padding: 10px 15px;
+  color: darkslateblue;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a:focus {
+  background-color: #eee;
+  text-decoration: underline;
+}
+
+
 
 /*About Me*/
 #main-content {
   text-align: center;
+}
 
+#about {
+  margin: auto;
+}
+
+#about-text {
+  text-align: left;
+  max-width: 600px;
+  margin: 15px auto;
+  font-size: 1rem;
 }
 
 /*Skillicon*/
@@ -60,6 +120,7 @@ a {
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 1.5rem;
   text-align: center;
+  margin: auto;
   padding: 1rem 0;
 }
 
@@ -70,9 +131,10 @@ a {
 }
 
 .skills-grid img {
-  width: 96px;
+  width: 70px;
   height: auto;
-  margin-bottom: 0.5rem;
+  display: block;
+  margin: 0 auto 0.5rem auto;
 }
 
 .skills-grid p {
@@ -101,6 +163,8 @@ a {
 .project-item img {
   max-width: 100%;
   height: auto;
+  display: block;
+  margin: 0 auto 0.5rem auto;
 }
 
 .project-item h3 {
@@ -117,9 +181,37 @@ a {
   text-decoration: underline;
 }
 
+#projects-text {
+  text-align: left;
+  max-width: 600px;
+  margin: 15px auto;
+  font-size: 1rem;
+}
+
 @media (min-width: 768px) {
   .projects-grid {
     grid-template-columns: 1fr 1fr;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.2rem;
+  }
+  p {
+    font-size: 0.95rem;
+    padding: 0 1rem;
+  }
+}
+  @media (max-width: 768px) {
+  /*nav*/
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-menu li a {
+    padding: 10px 20px;
   }
 }
 
@@ -135,8 +227,15 @@ a {
 }
 
 /*Footer*/
-#footer {
-  text-align: center;
+footer {
+  background-color: #333;
+  padding: 20px 10%;
+}
+
+#footer p {
+  margin: 0;
+  color: #fff;
+  text-align: right;
 }
 
 
