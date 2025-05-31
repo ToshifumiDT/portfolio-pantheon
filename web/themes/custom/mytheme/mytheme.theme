@@ -1,10 +1,15 @@
 <?php
 
+use Drupal\Core\Form\FormStateInterface;
+
 /**
  * Implements hook_preprocess_block().
  */
 function mytheme_preprocess_block(array &$variables) {
+  // Check the block ID (HTML ID for mytheme_contactforms is block-custom-mytheme-contactforms)
   if ($variables['elements']['#id'] === 'block-custom-mytheme-contactforms') {
+
+    // Load the contact form with the category "contact_forms"
     $form = \Drupal::entityTypeManager()
       ->getFormObject('contact_message', 'default')
       ->buildForm(
@@ -14,6 +19,11 @@ function mytheme_preprocess_block(array &$variables) {
         \Drupal::service('form_builder')
       );
 
-    $variables['content']['#markup'] = \Drupal::service('renderer')->render($form);
+    // Render the form safely
+    $variables['content'] = [
+      '#type' => 'inline_template',
+      '#template' => '{{ form }}',
+      '#context' => ['form' => $form],
+    ];
   }
 }
