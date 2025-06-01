@@ -5,7 +5,7 @@ use Drupal\Core\Form\FormStateInterface;
 /**
  * Implements hook_preprocess_block().
  */
-function custom_theme1_preprocess_block(array &$variables) {
+function mytheme_preprocess_block(array &$variables) {
   \Drupal::logger('block_debug')->info('Block ID: @id', [
     '@id' => $variables['elements']['#id'] ?? '(no ID)',
   ]);
