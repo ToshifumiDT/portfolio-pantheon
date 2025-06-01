@@ -5,10 +5,15 @@
  */
 function mytheme_preprocess_block(array &$variables) {
   if ($variables['elements']['#id'] === 'block-mytheme_contactforms') {
-    // Use formBuilder with the Contact MessageForm
+    // Use the MessageForm class with formBuilder
     $form = \Drupal::formBuilder()->getForm('Drupal\contact\MessageForm', [
       'contact_form' => 'contact_forms',
     ]);
+
+    // Fallback check: if $form is empty, show debug message
+    if (empty($form)) {
+      \Drupal::logger('block_debug')->warning('Contact form build failed or returned empty.');
+    }
 
     $variables['content'] = $form;
   }
