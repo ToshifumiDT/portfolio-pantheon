@@ -16,9 +16,10 @@ function mytheme_preprocess_block(array &$variables) {
       'contact_form' => 'contact_forms',
     ]);
 
-    \Drupal::logger('block_debug')->notice('<pre>@form</pre>', [
+    \Drupal::logger('block_debug')->notice('Form content: <pre>@form</pre>', [
       '@form' => print_r($form, true),
     ]);
+
 
     $variables['content'] = $form;
   }
