@@ -38,3 +38,9 @@ $ddev_settings = __DIR__ . '/settings.ddev.php';
 if (getenv('IS_DDEV_PROJECT') == 'true' && is_readable($ddev_settings)) {
   require $ddev_settings;
 }
+
+
+$settings['error_level'] = 'verbose';
+ini_set('display_errors', TRUE);
+ini_set('display_startup_errors', TRUE);
+error_reporting(E_ALL);
