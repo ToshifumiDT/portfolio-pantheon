@@ -8,30 +8,30 @@ use Drupal\contact\Entity\Message;
  */
 function mytheme_preprocess_block(array &$variables) {
   if ($variables['elements']['#id'] === 'block-mytheme_contactforms') {
-    // Manually load the ContactForm entity
+
     $contact_form = ContactForm::load('contact_forms');
+    \Drupal::logger('block_debug')->notice('Loaded ContactForm entity: <pre>@entity</pre>', [
+      '@entity' => print_r($contact_form, true),
+    ]);
 
     if ($contact_form) {
       $message = Message::create([
         'contact_form' => $contact_form->id(),
       ]);
+      \Drupal::logger('block_debug')->notice('Created Message entity: <pre>@entity</pre>', [
+        '@entity' => print_r($message, true),
+      ]);
 
-      $form_object = \Drupal::entityTypeManager()
-        ->getFormObject('contact_message', 'default');
-
+      $form_object = \Drupal::entityTypeManager()->getFormObject('contact_message', 'default');
       $form_object->setEntity($message);
 
-      $form = \Drupal::service('form_builder')
-        ->buildForm($form_object, []);
-
-      // Optional: Log form structure
+      $form = \Drupal::service('form_builder')->buildForm($form_object, []);
       \Drupal::logger('block_debug')->notice('Form built: <pre>@form</pre>', [
         '@form' => print_r($form, true),
       ]);
 
       $variables['content'] = $form;
-    }
-    else {
+    } else {
       \Drupal::logger('block_debug')->error('Contact form "contact_forms" not found.');
     }
   }
