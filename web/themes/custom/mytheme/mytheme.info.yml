@@ -4,8 +4,12 @@ description: 'Reset test theme'
 package: Custom
 core_version_requirement: ^11
 base theme: stark
+
 libraries:
   - mytheme/global-styling
+
+includes:
+  - mytheme.theme
 
 regions:
   header: 'Header'
