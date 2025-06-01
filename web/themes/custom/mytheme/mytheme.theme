@@ -4,5 +4,10 @@
  * Implements hook_preprocess_block().
  */
 function mytheme_preprocess_block(array &$variables) {
-  \Drupal::logger('block_debug')->notice('🔥 preprocess_block is firing!');
+  
+  if ($variables['elements']['#id'] === 'block-mytheme-contactforms') {
+    $variables['content'] = [
+      '#markup' => '<div style="color:red">✅ BLOCK IS HERE</div>',
+    ];
+  }
 }
