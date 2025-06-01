@@ -8,9 +8,6 @@ base theme: stark
 libraries:
   - mytheme/global-styling
 
-includes:
-  - mytheme.theme
-
 regions:
   header: 'Header'
   content: 'Content'
