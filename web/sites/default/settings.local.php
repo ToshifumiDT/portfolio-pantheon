@@ -1,6 +1,5 @@
 <?php
 
-
 if (file_exists($app_root . '/' . $site_path . '/services.local.yml')) {
   $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.local.yml';
 }
