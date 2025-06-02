@@ -140,8 +140,10 @@ section {
 }
 
 /*Flag*/
-.language-switcher a[href^="/ja"]::before {
-  background-image: url('/sites/default/files/inline-images/jp.png');
+
+/* No /ja in the URL because Japanese is the default language. May need to update this if the default changes later. */
+.language-switcher a[href="/"]::before {
+  background-image: url('/sites/default/files/inline-images/jp.png'); 
 }
 .language-switcher a[href^="/en"]::before {
   background-image: url('/sites/default/files/inline-images/gb.png');
