@@ -239,7 +239,7 @@ section {
   max-width: 100%;
 }
 
-.contact-form {
+form.contact-message-form {
   width: 100%;
   max-width: 400px;
   padding: 20px;
@@ -249,8 +249,8 @@ section {
   color: white;
 }
 
-.contact-form input,
-.contact-form textarea {
+form.contact-message-form input,
+form.contact-message-form textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
@@ -261,12 +261,13 @@ section {
   box-sizing: border-box;
 }
 
-.contact-form textarea {
+form.contact-message-form textarea {
   height: 150px;
   resize: vertical;
 }
 
-.contact-form button {
+form.contact-message-form input[type="submit"],
+form.contact-message-form input.form-submit {
   width: 100%;
   padding: 10px;
   background-color: #007bff;
@@ -278,9 +279,11 @@ section {
   transition: background-color 0.3s ease;
 }
 
-.contact-form button:hover {
+form.contact-message-form input[type="submit"]:hover,
+form.contact-message-form input.form-submit:hover {
   background-color: #0056b3;
 }
+
 
 
 /*Footer*/
