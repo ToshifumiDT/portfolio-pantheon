@@ -13,7 +13,7 @@ body {
   line-height: 1.6;
   background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
   color: #fff;
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 
 /*Background star*/
@@ -23,7 +23,7 @@ body {
 }
 
 #stars, #stars2, #stars3 {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 0;
