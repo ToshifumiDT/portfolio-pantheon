@@ -55,12 +55,16 @@ section {
 
 .header-container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  position: relative;
-  padding-top: 2.5rem;
+  flex-wrap: wrap;
 }
 
+.header-container .left {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
 
 .header-container h1 {
   font-size: 1.8rem;
@@ -72,7 +76,6 @@ section {
   flex-direction: row;
   gap: 20px;
   list-style: none;
-  margin-top: 0.5rem;
   margin: 0;
   padding: 0;
 }
@@ -95,11 +98,10 @@ section {
 
 /*Language Switcher*/
 .language-switcher {
-  position: absolute;
-  top: 15px;
-  right: 10%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   font-size: 0.85rem;
-  z-index: 10;
 }
 
 .language-switcher ul {
@@ -126,6 +128,30 @@ section {
 .language-switcher a:hover {
   color: #007bff;
   text-decoration: underline;
+}
+
+.language-switcher a::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 14px;
+  background-size: cover;
+  margin-right: 4px;
+}
+
+/*Flag*/
+.language-switcher a[href*="/en"]::before {
+  background-image: url('/sites/default/files/inline-images/gb.png');
+}
+.language-switcher a[href*="/ja"]::before {
+  background-image: url('/sites/default/files/inline-images/jp.png');
+}
+.language-switcher a[href*="/no"]::before {
+  background-image: url('/sites/default/files/inline-images/no.png');
+}
+
+.language-switcher h2 {
+  display: none;
 }
 
 

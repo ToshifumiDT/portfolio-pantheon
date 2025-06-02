@@ -13,18 +13,11 @@
   </a>
 
   {# Header #}
-  <header id="header">
-    <div class="header-container">
+<header id="header"> 
+  <div class="header-container">
+
+    <div class="left">
       <h1>Toshifumi Kamino</h1>
-      
-      {% if page.language_switcher %}
-        <div class="language-switcher">
-          {{ page.language_switcher }}
-        </div>
-      {% endif %}
-
-
-
       <nav aria-label="{{ 'Main Navigation'|t }}">
         <ul class="nav-menu">
           <li><a href="#about">{{ 'About'|t }}</a></li>
@@ -33,7 +26,17 @@
         </ul>
       </nav>
     </div>
-  </header>
+
+    {% if page.language_switcher %}
+      <div class="language-switcher">
+        {{ page.language_switcher }}
+      </div>
+    {% endif %}
+
+  </div>
+</header>
+
+
 
   {# About Me #}
   <main id="main-content">
