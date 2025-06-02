@@ -90,6 +90,37 @@ section {
   text-decoration: underline;
 }
 
+/*Language Switcher*/
+.language-switcher {
+  text-align: right; 
+  margin-top: 1rem;
+}
+
+.language-switcher ul {
+  list-style: none;        
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.language-switcher li {
+  margin: 0;
+  padding: 0;
+}
+
+.language-switcher a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+.language-switcher a:hover {
+  color: #007bff;
+}
 
 
 /*About Me*/
