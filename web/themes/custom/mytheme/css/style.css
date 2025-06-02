@@ -377,7 +377,7 @@ form.contact-message-form {
   width: 100%;
   max-width: 400px;
   padding: 20px;
-  background-color: #272727;
+  background-color: #27272782;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   color: white;
@@ -404,7 +404,7 @@ form.contact-message-form input[type="submit"],
 form.contact-message-form input.form-submit {
   width: 100%;
   padding: 10px;
-  background-color: #c1e4fc;
+  background-color: #42aff8;
   color: white;
   border: none;
   border-radius: 5px;
