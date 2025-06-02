@@ -37,7 +37,7 @@ body {
     100px 300px #FFF, 500px 800px #FFF, 900px 1000px #FFF,
     1200px 500px #FFF, 1500px 700px #FFF, 1700px 400px #FFF,
     1900px 900px #FFF;
-  animation: animStar 50s linear infinite;
+  /*animation: animStar 50s linear infinite;*/
 }
 
 #stars2 {
@@ -47,7 +47,7 @@ body {
   box-shadow:
     200px 600px #FFF, 600px 1200px #FFF, 1000px 1500px #FFF,
     1300px 800px #FFF, 1600px 900px #FFF;
-  animation: animStar 100s linear infinite;
+  /*animation: animStar 100s linear infinite;*/
 }
 
 #stars3 {
@@ -56,7 +56,7 @@ body {
   background: transparent;
   box-shadow:
     300px 900px #FFF, 700px 1400px #FFF, 1100px 1700px #FFF;
-  animation: animStar 150s linear infinite;
+  /*animation: animStar 150s linear infinite;*/
 }
 
 /*Make sure other elements appear in front of the stars*/
