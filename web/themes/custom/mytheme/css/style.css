@@ -17,15 +17,19 @@ body {
   position: relative;
 }
 
+@keyframes animStar {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-2000px); }
+}
+
 #stars, #stars2, #stars3 {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 3000px;
+  height: 100%;
   pointer-events: none;
   z-index: 0;
-  will-change: transform;
 }
 
 #stars {
@@ -35,6 +39,7 @@ body {
   box-shadow:
     100px 300px #FFF, 500px 800px #FFF, 900px 1000px #FFF,
     1200px 500px #FFF, 1500px 700px #FFF;
+  animation: animStar 50s linear infinite;
 }
 
 #stars2 {
@@ -43,6 +48,7 @@ body {
   background: transparent;
   box-shadow:
     200px 600px #FFF, 600px 1200px #FFF, 1000px 1500px #FFF;
+  animation: animStar 100s linear infinite;
 }
 
 #stars3 {
@@ -51,7 +57,21 @@ body {
   background: transparent;
   box-shadow:
     300px 900px #FFF, 700px 1400px #FFF, 1100px 1700px #FFF;
+  animation: animStar 150s linear infinite;
 }
+
+#stars::after,
+#stars2::after,
+#stars3::after {
+  content: "";
+  position: absolute;
+  top: 2000px;
+  width: inherit;
+  height: inherit;
+  background: transparent;
+  box-shadow: inherit;
+}
+
 
 
 /*Make sure other elements appear in front of the stars*/
