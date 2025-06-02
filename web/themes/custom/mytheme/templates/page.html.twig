@@ -17,7 +17,12 @@
     <div class="header-container">
       <h1>Toshifumi Kamino</h1>
       
-      {{ page.language_switcher }}
+      {% if page.language_switcher %}
+        <div class="language-switcher">
+          {{ page.language_switcher }}
+        </div>
+      {% endif %}
+
 
 
       <nav aria-label="{{ 'Main Navigation'|t }}">
