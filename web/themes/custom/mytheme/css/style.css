@@ -82,7 +82,7 @@ body {
 
 
 h1 {
-  color: darkslateblue;
+  color: #c1e4fc;
 }
 
 h2 {
@@ -104,7 +104,7 @@ h3 {
 }*/
 
 a {
-  color: darkslateblue;
+  color: #c1e4fc;
   text-decoration: none;
 }
 
@@ -117,7 +117,7 @@ section {
 
 /*Header*/
 #header {
-  background-color: #fff;
+  background-color: #2b246b2c;
   padding: 20px 10%;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
@@ -152,7 +152,7 @@ section {
 .nav-menu li a {
   display: block;
   padding: 10px 15px;
-  color: darkslateblue;
+  color: #c1e4fc;
   font-weight: bold;
   text-decoration: none;
   border-radius: 5px;
@@ -195,7 +195,7 @@ section {
 }
 
 .language-switcher a:hover {
-  color: #007bff;
+  color: #c1e4fc;
   text-decoration: underline;
 }
 
@@ -312,7 +312,7 @@ section {
 }
 
 .project-item a {
-  color: #0077cc;
+  color: #c1e4fc;
   text-decoration: none;
 }
 
@@ -404,7 +404,7 @@ form.contact-message-form input[type="submit"],
 form.contact-message-form input.form-submit {
   width: 100%;
   padding: 10px;
-  background-color: #007bff;
+  background-color: #c1e4fc;
   color: white;
   border: none;
   border-radius: 5px;
@@ -415,14 +415,14 @@ form.contact-message-form input.form-submit {
 
 form.contact-message-form input[type="submit"]:hover,
 form.contact-message-form input.form-submit:hover {
-  background-color: #0056b3;
+  background-color: #0057b372;
 }
 
 
 
 /*Footer*/
 footer {
-  background-color: #333;
+  background-color: #333333cf;
   padding: 20px 10%;
 }
 
