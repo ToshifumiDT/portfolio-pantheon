@@ -140,13 +140,13 @@ section {
 }
 
 /*Flag*/
-.language-switcher a[href*="/en"]::before {
-  background-image: url('/sites/default/files/inline-images/gb.png');
-}
-.language-switcher a[href*="/ja"]::before {
+.language-switcher a[href^="/ja"]::before {
   background-image: url('/sites/default/files/inline-images/jp.png');
 }
-.language-switcher a[href*="/no"]::before {
+.language-switcher a[href^="/en"]::before {
+  background-image: url('/sites/default/files/inline-images/gb.png');
+}
+.language-switcher a[href^="/nb"]::before {
   background-image: url('/sites/default/files/inline-images/no.png');
 }
 
