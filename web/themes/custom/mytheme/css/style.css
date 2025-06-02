@@ -7,27 +7,25 @@ html {
 
 body {
   font-family: 'Lato', sans-serif;
-  height: 100%;
+  min-height: 100vh;
   margin: 0;
   padding: 0;
   line-height: 1.6;
   background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
   color: #fff;
-  /*overflow: hidden;*/
-}
-
-/*Background star*/
-@keyframes animStar {
-  from { transform: translateY(0px); }
-  to { transform: translateY(-2000px); }
+  overflow-x: hidden;
+  position: relative;
 }
 
 #stars, #stars2, #stars3 {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 3000px;
+  pointer-events: none;
   z-index: 0;
-  height: 2000px;
+  will-change: transform;
 }
 
 #stars {
@@ -36,9 +34,7 @@ body {
   background: transparent;
   box-shadow:
     100px 300px #FFF, 500px 800px #FFF, 900px 1000px #FFF,
-    1200px 500px #FFF, 1500px 700px #FFF, 1700px 400px #FFF,
-    1900px 900px #FFF;
-  /*animation: animStar 50s linear infinite;*/
+    1200px 500px #FFF, 1500px 700px #FFF;
 }
 
 #stars2 {
@@ -46,9 +42,7 @@ body {
   height: 2px;
   background: transparent;
   box-shadow:
-    200px 600px #FFF, 600px 1200px #FFF, 1000px 1500px #FFF,
-    1300px 800px #FFF, 1600px 900px #FFF;
-  /*animation: animStar 100s linear infinite;*/
+    200px 600px #FFF, 600px 1200px #FFF, 1000px 1500px #FFF;
 }
 
 #stars3 {
@@ -57,8 +51,8 @@ body {
   background: transparent;
   box-shadow:
     300px 900px #FFF, 700px 1400px #FFF, 1100px 1700px #FFF;
-  /*animation: animStar 150s linear infinite;*/
 }
+
 
 /*Make sure other elements appear in front of the stars*/
 #header, main, #main-content, footer, #contact {
