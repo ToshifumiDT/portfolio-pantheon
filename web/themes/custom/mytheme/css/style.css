@@ -249,7 +249,7 @@ section {
 .top-text123 {
   flex: 1;
   color: #fff;
-  font-size: 1.8rem;
+  font-size: 3rem;
   line-height: 1.5;
   opacity: 1;
   transform: translateX(0);
@@ -267,8 +267,8 @@ section {
 }
 
 .top-img img {
-  width: 300px;
-  height: 300px;
+  width: 500px;
+  height: 500px;
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 0 20px rgba(255,255,255,0.3);
