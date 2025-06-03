@@ -187,7 +187,7 @@ section {
 }
 
 .language-switcher a {
-  color: #333;
+  color: #ffffff;
   font-weight: normal;
   text-decoration: none;
   transition: color 0.2s ease;
@@ -226,20 +226,60 @@ section {
 }
 
 
+/*Top*/
+#Top {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 0 5%;
+}
+
+.top-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/*Top Left Text*/
+.top-text123 {
+  flex: 1;
+  color: #fff;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 1s ease;
+}
+
+/*Top Image*/
+.top-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 1s ease;
+}
+
+.top-img img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 20px rgba(255,255,255,0.3);
+}
+
+
+
 /*About Me*/
 #main-content {
   text-align: center;
 }
-
-#about-img img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 50%;
-  display: block;
-  margin: 0 auto;
-}
-
 
 #about {
   margin: auto;
@@ -309,6 +349,7 @@ section {
   height: auto;
   display: block;
   margin: 0 auto 0.5rem auto;
+  border-radius: 30px;
 }
 
 .project-item h3 {
@@ -427,7 +468,7 @@ form.contact-message-form input.form-submit:hover {
 
 /*Footer*/
 footer {
-  background-color: #333333cf;
+  background-color: #33333340;
   padding: 20px 10%;
 }
 
