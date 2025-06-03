@@ -318,13 +318,15 @@ section {
 
 #about {
   margin: auto;
-  height: 100vh;
+  height: auto;
 }
 
 #about-text {
   text-align: left;
-  max-width: 600px;
+  max-width: 650px;
   margin: 15px auto;
+  margin-right: 30px;
+  margin-left: 30px;
   font-size: 1rem;
 }
 
@@ -333,6 +335,7 @@ section {
   text-align: center;
   margin-left: 10%;
   margin-right: 10%;
+  margin-top: 30px;
 }
 
 .skills-grid {
@@ -368,6 +371,7 @@ section {
   padding: 20px;
   margin-left: 10%;
   margin-right: 10%;
+  margin-top: 30px;
 }
 
 .projects-grid {
@@ -440,11 +444,13 @@ section {
 /*Github Link*/
 #github {
   text-align: center;
+  margin-top: 30px;
 }
 
 /*Contact Form*/
 #contact {
   text-align: center;
+  margin-top: 30px;
 }
 
 .contact-form-container {
@@ -506,6 +512,7 @@ form.contact-message-form input.form-submit:hover {
 footer {
   background-color: #33333340;
   padding: 20px 10%;
+  margin-top: 30px;
 }
 
 #footer p {
