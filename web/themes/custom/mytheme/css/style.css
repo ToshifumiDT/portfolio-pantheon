@@ -7,6 +7,7 @@ html {
 
 body {
   font-family: 'Lato', sans-serif;
+  /*min-height: 100vh;*/
   margin: 0;
   padding: 0;
   line-height: 1.6;
@@ -16,13 +17,6 @@ body {
   position: relative;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/*STAR*/
 @keyframes animStar {
   from { transform: translateY(0); }
   to   { transform: translateY(-2000px); }
@@ -42,7 +36,9 @@ img {
   width: 1px;
   height: 1px;
   background: transparent;
-  box-shadow: 100px 300px #FFF, 500px 800px #FFF, 900px 1000px #FFF, 1200px 500px #FFF, 1500px 700px #FFF;
+  box-shadow:
+    100px 300px #FFF, 500px 800px #FFF, 900px 1000px #FFF,
+    1200px 500px #FFF, 1500px 700px #FFF;
   animation: animStar 50s linear infinite;
 }
 
@@ -50,7 +46,8 @@ img {
   width: 2px;
   height: 2px;
   background: transparent;
-  box-shadow: 200px 600px #FFF, 600px 1200px #FFF, 1000px 1500px #FFF;
+  box-shadow:
+    200px 600px #FFF, 600px 1200px #FFF, 1000px 1500px #FFF;
   animation: animStar 100s linear infinite;
 }
 
@@ -58,11 +55,14 @@ img {
   width: 3px;
   height: 3px;
   background: transparent;
-  box-shadow: 300px 900px #FFF, 700px 1400px #FFF, 1100px 1700px #FFF;
+  box-shadow:
+    300px 900px #FFF, 700px 1400px #FFF, 1100px 1700px #FFF;
   animation: animStar 150s linear infinite;
 }
 
-#stars::after, #stars2::after, #stars3::after {
+#stars::after,
+#stars2::after,
+#stars3::after {
   content: "";
   position: absolute;
   top: 2000px;
@@ -71,6 +71,8 @@ img {
   background: transparent;
   box-shadow: inherit;
 }
+
+
 
 /*Make sure other elements appear in front of the stars*/
 #header, main, #main-content, footer, #contact {
@@ -81,20 +83,25 @@ img {
 
 h1 {
   color: #c1e4fc;
-  font-size: 2rem;
 }
 
 h2 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   margin-top: 30px;
   text-align: center;
 }
 
 h3 {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   margin-top: 20px;
   text-align: center;
 }
+
+/*p {
+  max-width: 600px;
+  margin: 15px auto;
+  font-size: 1rem;
+}*/
 
 a {
   color: #c1e4fc;
@@ -102,8 +109,8 @@ a {
 }
 
 
+
 section {
-  padding: 60px 5%;
   scroll-margin-top: 80px;
 }
 
@@ -129,6 +136,7 @@ section {
 }
 
 .header-container h1 {
+  font-size: 1.8rem;
   margin: 0;
   font-family: "Caveat", cursive;
   font-optical-sizing: auto;
@@ -148,7 +156,9 @@ section {
 .nav-menu li a {
   display: block;
   padding: 10px 15px;
+  color: #c1e4fc;
   font-weight: bold;
+  text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s ease;
 }
@@ -157,17 +167,6 @@ section {
 .nav-menu li a:focus {
   background-color: #eee;
   text-decoration: underline;
-}
-
-@media (max-width: 768px) {
-  .nav-menu {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-  .nav-menu li a {
-    font-size: 0.95rem;
-  }
 }
 
 /*Language Switcher*/
@@ -250,6 +249,7 @@ section {
   max-width: 1200px;
 }
 
+/*Top Left Text*/
 .top-text123 {
   flex: 1;
   color: #fff;
@@ -258,15 +258,18 @@ section {
   transform: translateX(0);
   transition: all 1s ease;
   font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
   text-align: left;
 }
 
 .top-text123 p {
-  font-size: 2.5rem;
+  font-size: 2.5rem !important;
   font-weight: 300;
   margin: 0.5rem 0;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
 }
+
 
 /*Top Image*/
 .top-img {
@@ -286,55 +289,52 @@ section {
   box-shadow: 0 0 20px rgba(255,255,255,0.3);
 }
 
-@media (max-width: 1024px) {
+/*responsive*/
+@media (max-width: 768px) {
   .top-container {
     flex-direction: column;
     text-align: center;
   }
 
   .top-text123 {
-    text-align: center;
-  }
-
-  .top-text123 p {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    padding-right: 0;
   }
 
   .top-img img {
-    width: 300px;
-    height: 300px;
-    margin-top: 1rem;
+    width: 250px;
+    height: 250px;
+    margin-top: 2rem;
   }
 }
 
-@media (max-width: 600px) {
-  .top-text123 p {
-    font-size: 1.5rem;
-  }
 
-  .top-img img {
-    width: 200px;
-    height: 200px;
-  }
-}
+
 
 /*About Me*/
-#about {
+#main-content {
   text-align: center;
+}
+
+#about {
+  margin: auto;
+  height: auto;
 }
 
 #about-text {
   text-align: left;
   max-width: 650px;
   margin: 15px auto;
-  padding: 0 1rem;
+  margin-right: 30px;
+  margin-left: 30px;
   font-size: 1rem;
 }
-
 
 /*Skillicon*/
 #skills {
   text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
   margin-top: 30px;
 }
 
@@ -342,9 +342,9 @@ section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 1.5rem;
+  text-align: center;
   margin: auto;
   padding: 1rem 0;
-  max-width: 800px;
 }
 
 .skills-grid div {
@@ -356,7 +356,8 @@ section {
 .skills-grid img {
   width: 70px;
   height: auto;
-  margin-bottom: 0.5rem;
+  display: block;
+  margin: 0 auto 0.5rem auto;
 }
 
 .skills-grid p {
@@ -367,15 +368,15 @@ section {
 
 /*My Projects*/
 #projects {
-  /* 🔄 変更: paddingを5%に拡張しレスポンシブ対応 */
-  padding: 20px 5%;
+  padding: 20px;
+  margin-left: 10%;
+  margin-right: 10%;
   margin-top: 30px;
-  text-align: center;
 }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: 1fr;
   gap: 30px;
 }
 
@@ -384,25 +385,59 @@ section {
 }
 
 .project-item img {
-  width: 100%;
-  border-radius: 20px;
-  margin-bottom: 1rem;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 0.5rem auto;
+  border-radius: 30px;
 }
 
 .project-item h3 {
-  font-size: 1.2em;
   margin: 10px 0 5px;
+  font-size: 1.2em;
 }
 
 .project-item a {
   color: #c1e4fc;
+  text-decoration: none;
+}
+
+.project-item a:hover {
+  text-decoration: underline;
 }
 
 #projects-text {
-  font-size: 1rem;
+  text-align: left;
   max-width: 600px;
   margin: 15px auto;
-  text-align: left;
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.2rem;
+  }
+  p {
+    font-size: 0.95rem;
+    padding: 0 1rem;
+  }
+}
+  @media (max-width: 768px) {
+  /*nav*/
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-menu li a {
+    padding: 10px 20px;
+  }
 }
 
 
@@ -421,16 +456,16 @@ section {
 .contact-form-container {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: 3rem auto;
   max-width: 100%;
 }
 
 form.contact-message-form {
-  /* 🔄 変更: 背景を半透明にし、視認性とデザイン性を改善 */
   width: 100%;
   max-width: 400px;
   padding: 20px;
-  background-color: rgba(39, 39, 39, 0.51);
+  background-color: #27272782;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   color: white;
@@ -471,6 +506,8 @@ form.contact-message-form input.form-submit:hover {
   background-color: #0057b372;
 }
 
+
+
 /*Footer*/
 footer {
   background-color: #33333340;
@@ -483,7 +520,3 @@ footer {
   color: #fff;
   text-align: right;
 }
-
-
-
-
